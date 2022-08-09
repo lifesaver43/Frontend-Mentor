@@ -4,14 +4,22 @@
     --Almost-Black: hsl(0, 0%, 8%);
 }
 
-* {
+@media(min-width: 50em){
+    :root{
+        font-size: 1.125em;
+    }
+}
+
+*, ::before, ::after{
+    margin: 0;
+    padding:0;
     box-sizing: border-box;
     font-family: 'Epilogue', sans-serif;
 }
 
 body {
-    padding: 0;
-    margin: 0;
+    height: 100%;
+    width: 100%;
 }
 
 ul {
@@ -79,6 +87,7 @@ header > nav {
 
 .feature-nav {
     margin-top: 3.5em;
+    cursor: pointer;
 }
 
 .feature-nav * {
@@ -93,6 +102,7 @@ header > nav {
 .company-nav {
     margin: 2em 0;
     margin-top: 2.5em;
+    cursor: pointer;
 }
 
 .company-nav > ul * {
@@ -133,17 +143,24 @@ section {
 }
 
 section > img {
-    background-size: contain;
-    width: 100vw;
+    /* background-size: contain; */
+    width: 100%;
 }
 
-section > h1 {
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3em;
+}
+
+section > .container > h1 {
     font-size: 2.7em;
     text-align: center;
     margin-bottom: 0;
 }
 
-section > p {
+section > .container > p {
     text-align: center;
     padding: 0 1em;
     color: var(--Medium-Gray);
@@ -151,7 +168,7 @@ section > p {
     margin-top: 1em;
 }
 
-section > button {
+section > .container > button {
     color: var(--Almost-white);
     font-size: 1em;
     font-weight: 700;
@@ -160,14 +177,76 @@ section > button {
     height: 3em;
     border: none;
     border-radius: 1em;
-    margin-top: 1em;
+    margin-top: 2em;
 }
 
-section > .brands {
+section > .container > .brands {
     margin: 3em 1em;
     display: flex;
     align-items: center;
     gap: 1.5em;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (min-width: 768px) {
+    .mob-img {
+        display: none;
+    }
+    .desk-img {
+        display: block;
+    }
+
+    section {
+        flex-direction: row-reverse;
+        justify-content: space-evenly;
+    }
+
+    section > img {
+        width: 30vw;
+        height: 80vh;
+    }
+
+    section > .container {
+        width: 40vw;
+        /* background-color: blue; */
+        gap: 4em;
+        align-items: flex-start;
+    }
+
+    section > .container > h1 {
+        text-align: left;
+        font-size: 4.5em;
+        max-width: 80%;
+    }
+
+    section > .container > p {
+        text-align: left;
+        padding-left: 0;
+        max-width: 60%;
+    }
+
+    section > .container > .brands {
+        width: 90%;
+        justify-content: space-between;
+
+    }
+
+    /* continue here */
+
+    /* RESPONSIVE NAV */
+    /* nav img:last-child {
+        display: none;
+    }
+
+    .nav-bar {
+        display: inline;
+    }
+
+    .top-nav {
+        display: flex;
+        flex-direction: row;
+    } */
 }
 
 
