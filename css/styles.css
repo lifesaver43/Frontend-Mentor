@@ -113,6 +113,10 @@ header > nav {
     padding-left: 1.5em;
 }
 
+.top-nav p:last-child {
+    margin-top: 2em;
+}
+
 
 .login {
     margin-top: 3em;
@@ -235,18 +239,79 @@ section > .container > .brands {
     /* continue here */
 
     /* RESPONSIVE NAV */
-    /* nav img:last-child {
+    nav img:last-child {
         display: none;
     }
 
     .nav-bar {
-        display: inline;
+        display: flex;
+        flex-direction: row;
+        position: fixed;
+        left: 10em;
+        top: 2em;
+        align-items: center;
     }
 
     .top-nav {
         display: flex;
         flex-direction: row;
-    } */
+        gap: 2em;
+    }
+
+    .top-nav > img:first-child {
+        display: none;
+    }
+
+    .top-nav * {
+        margin-top: 0;
+    }
+
+    .top-nav p:last-child {
+        margin-top: 0;
+    }
+
+    .login {
+        margin-top: 0;
+        flex-direction: row;
+        position: fixed;
+        right: 2.5em;
+        top: 1em;
+        gap: 1.5em;
+    }
+
+    .login > button {
+        font-size: 1em;
+        padding: 1em 2em;
+    }
+
+    .feature-child {
+        background-color: var(--Almost-white);
+        padding: 1em 1.5em;
+        margin-top: 1em;
+        border-radius: 1em;
+        box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.4);
+    }
+
+    .feature-child li:first-child {
+        margin-top: 0;
+    }
+
+    .feature-child * {
+        margin-top: 1em;
+    }
+
+    .company-child {
+        background-color: var(--Almost-white);
+        padding: 1em 1.5em;
+        margin-top: 1em;
+        border-radius: 1em;
+        box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.4);
+    }
+
+    .company-child li:first-child {
+        margin-top: 0;
+    }
+    
 }
 
 
